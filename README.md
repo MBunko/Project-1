@@ -43,7 +43,7 @@
   
 ERD built with Lucid.app  
   
-![ERD][Initial-ERD]
+![ERD][Initial ERD]
 
 ### CI pipeline
 
