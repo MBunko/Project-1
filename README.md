@@ -43,7 +43,9 @@
   
 ERD built with Lucid.app  
   
-![ERD][Initial ERD]
+![ERD][Initial ERD]  
+  
+![ERD2][ERD2]
 
 ### CI pipeline
 
@@ -103,3 +105,4 @@ A list of risks identified at the star of the project with limited knowledge
 
 
 [Initial ERD]: https://lucid.app/publicSegments/view/9325625a-5d54-468f-82a9-23ed5f7aa92f/image.jpeg
+[ERD2]: https://lucid.app/publicSegments/view/5d38ea36-ef0f-4a59-8cdb-7e932e2a6fd9/image.jpeg
