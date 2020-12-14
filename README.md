@@ -61,6 +61,23 @@ Below is the initial Trello board from the start of the project:
   
 Here is the link to my Trello board: https://trello.com/b/EcXuFyAV/sfia-project-1  
 Below is my current Trello board:
+  
+  
+  
+Here is a table of user stories:
+
+|As a…|I want to…|	So that I can…|Priority|
+|---|---|---|---|
+|User|See new reviews|Be informed on products|Must
+|User|Search for specific titles|Know if a product I’m interested in is worth my time/money|Should
+|User|Have an uncluttered and intuitive website|Can easily navigate the site and find what looking for|Must
+|User|Add reviews|Create a new review  for a game I finished|Must
+|User|Update reviews|Make changes to my review in case of mistakes or change in opinion|Must
+|User|Delete reviews|Remove a review  I no longer agree with or regret|Must
+|User|See aggregate reviews|See general consensus on games|Should
+|Host|Have an uncluttered back end|Run it cheaply and debug issues more easily|Should
+|Host|Have a secure database off site|Make sure no one can reformat my database or see peoples passwords|Must
+|Host|Have automated testing, running and integration|Have a site that’s constantly up and to reduce my repetitive workload|	Must
 
 ### Expanded user stories
 
