@@ -3,28 +3,28 @@
 ### Contents
 
 1. [Brief](#Brief) 
-2. [Software design][#Software design]
-    2.1. [ERD] [ERD]
-    2.2. [CI pipeline][#CI pipeline]
-3. [Project planning][#Project planning]
-    3.1. [Trello board][#Trello board]
-    3.2. [Expanded user stories][#Expanded user stories]
-4. [Risk assessment][#Risk assessment]
-5. [Testing][#Testing]
-    5.1. [Unit testing and integration testing][#Unit testing and integration testing]
-    5.2. [Testing coverage][#Testing coverage]
-6. [Software development][#Software development]
-    6.1. [Front end][#Front end]
-    6.2. [CRUD functionality][#CRUD functionality]
-7. [Systems build][#Systems build]
-    7.1. [Jenkins][#Jenkins]
-    7.2. [Integration test results][#Integration test results]
-8. [Evaluation][#Evaluation]
-    8.1. [Issues][#Issues]
-    8.2. [Possible improvements][#Possible improvements]
-9. [Appendix][#Appendix]
-    9.1. [Licensing][#Licensing]
-    9.2. [Contributors & Acknowledgment][#Contributors & Acknowledgment]
+2. [Software design](#Software design)
+    2.1. [ERD](#ERD)
+    2.2. [CI pipeline](#CI pipeline)
+3. [Project planning](#Project planning)
+    3.1. [Trello board](#Trello board)
+    3.2. [Expanded user stories](#Expanded user stories)
+4. [Risk assessment](#Risk assessment)
+5. [Testing](#Testing)
+    5.1. [Unit testing and integration testing](#Unit testing and integration testing)
+    5.2. [Testing coverage](#Testing coverage)
+6. [Software development](#Software development)
+    6.1. [Front end](#Front end)
+    6.2. [CRUD functionality](#CRUD functionality)
+7. [Systems build](#Systems build)
+    7.1. [Jenkins](#Jenkins)
+    7.2. [Integration test results](#Integration test results)
+8. [Evaluation](#Evaluation)
+    8.1. [Issues](#Issues)
+    8.2. [Possible improvements](#Possible improvements)
+9. [Appendix](#Appendix)
+    9.1. [Licensing](#Licensing)
+    9.2. [Contributors & Acknowledgment](#Contributors & Acknowledgment)
 
 
 
