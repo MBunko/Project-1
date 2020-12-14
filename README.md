@@ -105,4 +105,4 @@ A list of risks identified at the star of the project with limited knowledge
 
 
 [Initial ERD]: https://lucid.app/publicSegments/view/3a71919e-07eb-4370-8853-af7eafda35bd/image.png
-[ERD2]: https://lucid.app/publicSegments/view/e7246a7a-a5cb-4904-8c61-b2f658120f53/image.png
+[ERD2]: https://lucid.app/publicSegments/view/8967aca1-e6aa-43ec-b392-f9a77eab4f13/image.png
