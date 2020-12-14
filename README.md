@@ -39,7 +39,11 @@
 ## Software design
 
 
-### ERD
+### ERD  
+  
+ERD built with Lucid.app  
+  
+![ERD][Initial-ERD]
 
 ### CI pipeline
 
@@ -92,3 +96,10 @@ A list of risks identified at the star of the project with limited knowledge
 ### Licensing 
 
 ### Contributors & Acknowledgment
+
+
+
+
+
+
+[Initial ERD]: https://lucid.app/publicSegments/view/f103dd15-b1ee-43d6-b98f-3530afeda918/image.pdf
