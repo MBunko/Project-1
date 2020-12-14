@@ -57,7 +57,10 @@ ERD built with Lucid.app
   
 Below is the initial Trello board from the start of the project:  
   
-![TB1][TB1]
+![TB1][TB1]  
+  
+Here is the link to my Trello board: https://trello.com/b/EcXuFyAV/sfia-project-1  
+Below is my current Trello board:
 
 ### Expanded user stories
 
