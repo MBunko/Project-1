@@ -53,7 +53,11 @@ ERD built with Lucid.app
 
 ## Project planning
 
-### Trello board
+### Trello board  
+  
+Below is the initial Trello board from the start of the project:  
+  
+![TB1][TB1]
 
 ### Expanded user stories
 
@@ -106,3 +110,4 @@ A list of risks identified at the star of the project with limited knowledge
 
 [Initial ERD]: https://lucid.app/publicSegments/view/3a71919e-07eb-4370-8853-af7eafda35bd/image.png
 [ERD2]: https://lucid.app/publicSegments/view/8967aca1-e6aa-43ec-b392-f9a77eab4f13/image.png
+[TB1]: https://imgur.com/a/YapAFAp
