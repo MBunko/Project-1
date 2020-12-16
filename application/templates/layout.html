@@ -1,0 +1,12 @@
+<html>
+    <head>
+        <title> Metagamer- {{ title }}</title>
+    </head>
+    <body>
+        <h1>Metagamer- {{ title }}</h1>
+        <a href="{{ url_for('home') }}">Home</a>
+        <a href="{{ url_for('add') }}">New game</a>
+        {% block body %}
+        {% endblock body %}
+    </body>
+</html>
