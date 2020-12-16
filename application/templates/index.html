@@ -6,6 +6,9 @@
     {% if game.Title.startswith("A") or game.Title.startswith("a")  %}
 
         {{ game.Title }}
+        <form action="{{ url_for('game', Title=game.Title) }}">
+            <input type=submit value="View game">
+    </form>
         <br>
     {% endif %}
 {% endfor %}
