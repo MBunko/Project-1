@@ -10,7 +10,7 @@ def add():
     if request.method == 'POST':
 
         if not form.validate_on_submit():
-            return "Please supply both task name and status"
+            return render_template('adderror.html', form=form, title="New Game")
         else:
             new_game = Games(Title=form.Title.data, Release_date=form.Release_date.data, Genre=form.Genre.data, Age_rating=form.Age_rating.data, Description= form.Description.data)
             db.session.add(new_game)

@@ -168,4 +168,161 @@
         <br>
     {% endif %}
 {% endfor %}
+
+<h2>O</h2>
+{% for game in all_games %}
+    {% if game.Title.startswith("O") or game.Title.startswith("o")  %}
+
+        {{ game.Title }}
+        <form action="{{ url_for('game', Title=game.Title) }}">
+            <input type=submit value="View game">
+    </form>
+        <br>
+    {% endif %}
+{% endfor %}
+
+<h2>P</h2>
+{% for game in all_games %}
+    {% if game.Title.startswith("P") or game.Title.startswith("p")  %}
+
+        {{ game.Title }}
+        <form action="{{ url_for('game', Title=game.Title) }}">
+            <input type=submit value="View game">
+    </form>
+        <br>
+    {% endif %}
+{% endfor %}
+
+<h2>Q</h2>
+{% for game in all_games %}
+    {% if game.Title.startswith("Q") or game.Title.startswith("q")  %}
+
+        {{ game.Title }}
+        <form action="{{ url_for('game', Title=game.Title) }}">
+            <input type=submit value="View game">
+    </form>
+        <br>
+    {% endif %}
+{% endfor %}
+
+<h2>R</h2>
+{% for game in all_games %}
+    {% if game.Title.startswith("R") or game.Title.startswith("r")  %}
+
+        {{ game.Title }}
+        <form action="{{ url_for('game', Title=game.Title) }}">
+            <input type=submit value="View game">
+    </form>
+        <br>
+    {% endif %}
+{% endfor %}
+
+<h2>S</h2>
+{% for game in all_games %}
+    {% if game.Title.startswith("S") or game.Title.startswith("s")  %}
+
+        {{ game.Title }}
+        <form action="{{ url_for('game', Title=game.Title) }}">
+            <input type=submit value="View game">
+    </form>
+        <br>
+    {% endif %}
+{% endfor %}
+
+<h2>T</h2>
+{% for game in all_games %}
+    {% if game.Title.startswith("T") or game.Title.startswith("t")  %}
+
+        {{ game.Title }}
+        <form action="{{ url_for('game', Title=game.Title) }}">
+            <input type=submit value="View game">
+    </form>
+        <br>
+    {% endif %}
+{% endfor %}
+
+<h2>U</h2>
+{% for game in all_games %}
+    {% if game.Title.startswith("U") or game.Title.startswith("u")  %}
+
+        {{ game.Title }}
+        <form action="{{ url_for('game', Title=game.Title) }}">
+            <input type=submit value="View game">
+    </form>
+        <br>
+    {% endif %}
+{% endfor %}
+
+<h2>V</h2>
+{% for game in all_games %}
+    {% if game.Title.startswith("V") or game.Title.startswith("v")  %}
+
+        {{ game.Title }}
+        <form action="{{ url_for('game', Title=game.Title) }}">
+            <input type=submit value="View game">
+    </form>
+        <br>
+    {% endif %}
+{% endfor %}
+
+<h2>W</h2>
+{% for game in all_games %}
+    {% if game.Title.startswith("W") or game.Title.startswith("w")  %}
+
+        {{ game.Title }}
+        <form action="{{ url_for('game', Title=game.Title) }}">
+            <input type=submit value="View game">
+    </form>
+        <br>
+    {% endif %}
+{% endfor %}
+
+<h2>X</h2>
+{% for game in all_games %}
+    {% if game.Title.startswith("X") or game.Title.startswith("x")  %}
+
+        {{ game.Title }}
+        <form action="{{ url_for('game', Title=game.Title) }}">
+            <input type=submit value="View game">
+    </form>
+        <br>
+    {% endif %}
+{% endfor %}
+
+<h2>Y</h2>
+{% for game in all_games %}
+    {% if game.Title.startswith("Y") or game.Title.startswith("y")  %}
+
+        {{ game.Title }}
+        <form action="{{ url_for('game', Title=game.Title) }}">
+            <input type=submit value="View game">
+    </form>
+        <br>
+    {% endif %}
+{% endfor %}
+
+<h2>Z</h2>
+{% for game in all_games %}
+    {% if game.Title.startswith("Z") or game.Title.startswith("z")  %}
+
+        {{ game.Title }}
+        <form action="{{ url_for('game', Title=game.Title) }}">
+            <input type=submit value="View game">
+    </form>
+        <br>
+    {% endif %}
+{% endfor %}
+
+<h2>.</h2>
+{% for game in all_games %}
+    {% if not game.Title[0].isalpha()  %}
+
+        {{ game.Title }}
+        <form action="{{ url_for('game', Title=game.Title) }}">
+            <input type=submit value="View game">
+    </form>
+        <br>
+    {% endif %}
+{% endfor %}
+
 {% endblock body %}
