@@ -1,0 +1,17 @@
+{% extends 'layout.html' %}
+{% block body %}
+
+<form method='POST' action=''>
+    {{ form1.hidden_tag() }}
+    {{ form1.Review_password.label }} {{ form1.Review_password }}
+    <br>
+    {{ form1.submit }}
+    {{ message }}
+</form>
+
+
+
+
+
+
+{% endblock body %}

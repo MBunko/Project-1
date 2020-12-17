@@ -1,5 +1,5 @@
 from application import app, db
-from application.models import Games, Add, Reviews, Review, Delete
+from application.models import Games, Add, Reviews, Review, Delete, Update
 from flask import Flask, render_template, request, redirect, url_for
 from flask_wtf import FlaskForm
 from wtforms import StringField, SubmitField
@@ -59,14 +59,39 @@ def delete(number):
 
 @app.route('/edit/<int:number>', methods=["GET", "POST"])
 def edit(number):
-    form=Delete()
+    form1=Delete()
     rev = Reviews.query.filter_by(Review_ID=number).first()
     r=rev.Games_title
     d= rev.Review_ID
     if request.method == "POST":
-        if form.Review_password.data==rev.Review_password:
-            return redirect(url_for("delete", number=d))
-        else:
-            return "Wrong password: Access Denied"
+        if form1.Review_password.data==rev.Review_password:
+                return redirect(url_for("delete", number=d))
 
-    return render_template('edit.html', form=form, title=r)
+
+    return render_template('delete.html', form1=form1, title=r)
+
+@app.route('/update/<int:number>', methods=["GET", "POST"])
+def update(number):
+    form1=Delete()
+    rev = Reviews.query.filter_by(Review_ID=number).first()
+    r=rev.Games_title
+    d= rev.Review_ID
+    if request.method == "POST":
+        if form1.Review_password.data==rev.Review_password:
+            return redirect(url_for("change", number=d))
+
+
+    return render_template('delete.html', form1=form1, title=r)
+
+@app.route("/change/<int:number>", methods=["GET", "POST"])
+def change(number):
+    form=Review()
+    review = Reviews.query.filter_by(Review_ID=number).first()
+    if request.method =="POST":
+        review.Reviewer_name=form.Reviewer_name.data
+        review.Review_password=form.Review_password.data
+        review.Review=form.Review.data
+        review.Rating= form.Rating.data
+        db.session.commit()
+        return redirect(url_for("game", Title=review.Games_title))
+    return render_template("change.html", form=form, title="Update", review=review)
