@@ -1,5 +1,5 @@
 from application import app, db
-from application.models import Games, Add, Reviews, Review
+from application.models import Games, Add, Reviews, Review, Delete
 from flask import Flask, render_template, request, redirect, url_for
 from flask_wtf import FlaskForm
 from wtforms import StringField, SubmitField
@@ -45,3 +45,28 @@ def review(Title):
             db.session.commit()
             return redirect(url_for("game", Title=new_review.Games_title))
     return render_template('review.html', form=form, title="New Game")
+
+@app.route('/delete/<int:number>')
+def delete(number):
+    rev = Reviews.query.filter_by(Review_ID=number).first()
+    r=rev.Games_title
+    if rev is not None:
+        db.session.delete(rev)
+        db.session.commit()
+        return redirect(url_for("game", Title=r))
+    else:
+        return "Entry does not exist"
+
+@app.route('/edit/<int:number>', methods=["GET", "POST"])
+def edit(number):
+    form=Delete()
+    rev = Reviews.query.filter_by(Review_ID=number).first()
+    r=rev.Games_title
+    d= rev.Review_ID
+    if request.method == "POST":
+        if form.Review_password.data==rev.Review_password:
+            return redirect(url_for("delete", number=d))
+        else:
+            return "Wrong password: Access Denied"
+
+    return render_template('edit.html', form=form, title=r)

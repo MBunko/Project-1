@@ -19,7 +19,9 @@
        <h4>Rating:{{ review.Rating }}/10 </h4>
         {{ review.Review }}
         <br>
-        <br>
+        <form action="{{ url_for('edit', number=review.Review_ID) }}">
+         <input type=submit value="Edit review">
+      </form>
 {% endfor %}
 
 
