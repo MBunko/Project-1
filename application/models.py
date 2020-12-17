@@ -30,11 +30,15 @@ class Add(FlaskForm):
     Genre=StringField ("Genre", validators=[DataRequired()])
     Age_rating= StringField("Age rating", validators=[DataRequired()])
     Description= StringField("Description", validators=[DataRequired()])
-    submit = SubmitField('Add Entry')
+    submit = SubmitField('Add Game')
 
 class Review(FlaskForm):
     Reviewer_name = StringField('Reviewer name')
     Review_password = StringField('Password to edit review', validators=[DataRequired()])
     Review=StringField ("Review- Max 3000 characters", validators=[DataRequired()])
     Rating= IntegerField("Rating out of 10", validators=[DataRequired(), NumberRange(1,10)])
-    submit = SubmitField('Add Entry')
+    submit = SubmitField('Add Review')
+
+class Delete(FlaskForm):
+    Review_password = StringField('Password to edit review', validators=[DataRequired()])
+    submit= SubmitField("Delete Review")
