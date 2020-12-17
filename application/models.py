@@ -1,31 +1,40 @@
 from application import db
 from flask import Flask, render_template, request
 from flask_wtf import FlaskForm
-from wtforms import StringField, SubmitField
-from wtforms.validators import DataRequired
+from wtforms import StringField, SubmitField, IntegerField
+from wtforms.validators import DataRequired, NumberRange
+from datetime import datetime
 
 class Games(db.Model):
     Title = db.Column(db.String(30), primary_key=True)
-    Release_date = db.Column(db.String(30))
-    Genre=db.Column(db.String(30))
-    Age_rating= db.Column(db.String(30))
-    Description= db.Column(db.String(30))
+    Release_date = db.Column(db.String(30), nullable=False)
+    Genre=db.Column(db.String(30), nullable=False)
+    Age_rating= db.Column(db.String(30), nullable=False)
+    Description= db.Column(db.String(300), nullable=False)
     reviews= db.relationship("Reviews", backref="games")
 
 class Reviews(db.Model):
     Review_ID = db.Column(db.Integer, primary_key=True)
     Games_title= db.Column(db.String(30), db.ForeignKey('games.Title'), nullable=False)
+    Date= db.Column(db.DateTime, nullable=False, default=datetime.utcnow)
     Reviewer_name=db.Column(db.String(30))
-    Review_password=db.Column(db.String(30))
-    Review=db.Column(db.String(30))
-    Rating=db.Column(db.Integer)
+    Review_password=db.Column(db.String(30), nullable=False)
+    Review=db.Column(db.String(3000), nullable=False)
+    Rating=db.Column(db.Integer, nullable=False)
 
 
 
 class Add(FlaskForm):
     Title = StringField('Title', validators=[DataRequired()])
-    Release_date = StringField('Release date')
-    Genre=StringField ("Genre")
-    Age_rating= StringField("Age rating")
-    Description= StringField("Description")
+    Release_date = StringField('Release date', validators=[DataRequired()])
+    Genre=StringField ("Genre", validators=[DataRequired()])
+    Age_rating= StringField("Age rating", validators=[DataRequired()])
+    Description= StringField("Description", validators=[DataRequired()])
+    submit = SubmitField('Add Entry')
+
+class Review(FlaskForm):
+    Reviewer_name = StringField('Reviewer name')
+    Review_password = StringField('Password to edit review', validators=[DataRequired()])
+    Review=StringField ("Review- Max 3000 characters", validators=[DataRequired()])
+    Rating= IntegerField("Rating out of 10", validators=[DataRequired(), NumberRange(1,10)])
     submit = SubmitField('Add Entry')
