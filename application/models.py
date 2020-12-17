@@ -42,3 +42,7 @@ class Review(FlaskForm):
 class Delete(FlaskForm):
     Review_password = StringField('Password to edit review', validators=[DataRequired()])
     submit= SubmitField("Delete Review")
+
+class Update(FlaskForm):
+    Review_password = StringField('Password to edit review', validators=[DataRequired()])
+    submit= SubmitField("Update Review")

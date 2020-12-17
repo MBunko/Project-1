@@ -20,6 +20,9 @@
         {{ review.Review }}
         <br>
         <form action="{{ url_for('edit', number=review.Review_ID) }}">
+         <input type=submit value="Delete review">
+      </form>
+      <form action="{{ url_for('update', number=review.Review_ID) }}">
          <input type=submit value="Edit review">
       </form>
 {% endfor %}
