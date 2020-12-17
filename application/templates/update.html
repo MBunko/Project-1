@@ -8,9 +8,22 @@
     <h2> Age rating: {{ game.Age_rating }} </h2>
    <br>
     <h2> Description: {{ game.Description }} </h2>
-
+    <form action="{{ url_for('review', Title=game.Title) }}">
+      <input type=submit value="Create review">
+   </form>
    <br>
-   {{ game.reviews }}
+
+   {% for review in game.reviews %}
+    
+        <h3>{{ review.Reviewer_name }} -{{ review.Date }} </h3>           
+       <h4>Rating:{{ review.Rating }}/10 </h4>
+        {{ review.Review }}
+        <br>
+        <br>
+{% endfor %}
+
+
+
 
 {% endblock body %}
 
