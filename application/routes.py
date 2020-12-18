@@ -108,3 +108,4 @@ def change(number, pword):
         db.session.commit()
         return redirect(url_for("game", Title=review.Games_title))
     return render_template("change.html", form=form, title="Update", review=review)
+    
