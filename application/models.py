@@ -1,12 +1,13 @@
 from application import db
 from flask import Flask, render_template, request
 from flask_wtf import FlaskForm
-from wtforms import StringField, SubmitField, IntegerField
+from wtforms import StringField, SubmitField, IntegerField, DateField
 from wtforms.validators import DataRequired, NumberRange
 from datetime import datetime
 
+
 class Games(db.Model):
-    Title = db.Column(db.String(30), primary_key=True)
+    Title = db.Column(db.String(300), primary_key=True)
     Release_date = db.Column(db.String(30), nullable=False)
     Genre=db.Column(db.String(30), nullable=False)
     Age_rating= db.Column(db.String(30), nullable=False)
@@ -15,7 +16,8 @@ class Games(db.Model):
 
 class Reviews(db.Model):
     Review_ID = db.Column(db.Integer, primary_key=True)
-    Games_title= db.Column(db.String(30), db.ForeignKey('games.Title'), nullable=False)
+    Games_title= db.Column(db.String(300), db.ForeignKey('games.Title'), nullable=False)
+    Review_title= db.Column(db.String(300), nullable=False)
     Date= db.Column(db.DateTime, nullable=False, default=datetime.utcnow)
     Reviewer_name=db.Column(db.String(30))
     Review_password=db.Column(db.String(30), nullable=False)
@@ -23,16 +25,16 @@ class Reviews(db.Model):
     Rating=db.Column(db.Integer, nullable=False)
 
 
-
 class Add(FlaskForm):
     Title = StringField('Title', validators=[DataRequired()])
-    Release_date = StringField('Release date', validators=[DataRequired()])
+    Release_date = DateField('Release date', validators=[DataRequired()])
     Genre=StringField ("Genre", validators=[DataRequired()])
     Age_rating= StringField("Age rating", validators=[DataRequired()])
     Description= StringField("Description", validators=[DataRequired()])
     submit = SubmitField('Add Game')
 
 class Review(FlaskForm):
+    Review_title= StringField("Review title")
     Reviewer_name = StringField('Reviewer name')
     Review_password = StringField('Password to edit review', validators=[DataRequired()])
     Review=StringField ("Review- Max 3000 characters", validators=[DataRequired()])
