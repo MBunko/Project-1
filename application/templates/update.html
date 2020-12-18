@@ -12,13 +12,17 @@
       <input type=submit value="Create review">
    </form>
    <br>
+  <h2> Overall review score: {{all_ratings}} </h2>
+
+   <h1> Reviews</h1>
 
    {% for review in game.reviews %}
-    
-        <h3>{{ review.Reviewer_name }} -{{ review.Date }} </h3>           
+__________________________________________________________________________________________
+      <h3> {{ review.Review_title }}</h3>
+        <h4>{{ review.Reviewer_name }} -{{ review.Date }} </h4>           
        <h4>Rating:{{ review.Rating }}/10 </h4>
         {{ review.Review }}
-        <br>
+      
         <form action="{{ url_for('edit', number=review.Review_ID) }}">
          <input type=submit value="Delete review">
       </form>

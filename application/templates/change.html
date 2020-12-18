@@ -1,10 +1,12 @@
 {% extends 'layout.html' %}
 {% block body %}
 <br>
-Review: {{ review.Reviewer_name }}
+Review: {{ review.Review_title }}
 <br>
 <form method='POST' action=''>
         {{ form.hidden_tag() }}
+        {{ form.Review_title.label }} {{ form.Review_title }}
+        <br>
         {{ form.Reviewer_name.label }} {{ form.Reviewer_name }}
         <br>
         {{ form.Review_password.label }} {{ form.Review_password}}

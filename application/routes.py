@@ -30,7 +30,17 @@ def home():
 def game(Title):
     form=Add()
     game = Games.query.filter_by(Title=Title).first()
-    return render_template("update.html", form=form, title=Title, game=game)
+    a=0
+    b=0
+    for review in game.reviews:
+        a+=review.Rating
+        b+=1
+    if b==0:
+        d="No reviews have been posted"
+    else:
+        c= int(a/b*10)
+        d=float(c/10)
+    return render_template("update.html", form=form, title=Title, game=game, all_ratings=d)
 
 @app.route('/review/<Title>', methods=["GET", "POST"])
 def review(Title):
@@ -40,14 +50,14 @@ def review(Title):
         if not form.validate_on_submit():
             return render_template('reviewerror.html', form=form, title="New Game")
         else:
-            new_review = Reviews(Games_title=Title, Reviewer_name=form.Reviewer_name.data, Review_password=form.Review_password.data, Review=form.Review.data, Rating= form.Rating.data)
+            new_review = Reviews(Games_title=Title, Review_title=form.Review_title.data, Reviewer_name=form.Reviewer_name.data, Review_password=form.Review_password.data, Review=form.Review.data, Rating= form.Rating.data)
             db.session.add(new_review)
             db.session.commit()
             return redirect(url_for("game", Title=new_review.Games_title))
     return render_template('review.html', form=form, title="New Game")
 
-@app.route('/delete/<int:number>')
-def delete(number):
+@app.route('/delete/<int:number>/<pword>')
+def delete(number, pword):
     rev = Reviews.query.filter_by(Review_ID=number).first()
     r=rev.Games_title
     if rev is not None:
@@ -63,31 +73,34 @@ def edit(number):
     rev = Reviews.query.filter_by(Review_ID=number).first()
     r=rev.Games_title
     d= rev.Review_ID
+    e=rev.Review_password
     if request.method == "POST":
         if form1.Review_password.data==rev.Review_password:
-                return redirect(url_for("delete", number=d))
+                return redirect(url_for("delete", number=d, pword=e))
 
 
     return render_template('delete.html', form1=form1, title=r)
 
 @app.route('/update/<int:number>', methods=["GET", "POST"])
 def update(number):
-    form1=Delete()
+    form1=Update()
     rev = Reviews.query.filter_by(Review_ID=number).first()
     r=rev.Games_title
     d= rev.Review_ID
+    e=rev.Review_password
     if request.method == "POST":
         if form1.Review_password.data==rev.Review_password:
-            return redirect(url_for("change", number=d))
+            return redirect(url_for("change", number=d, pword=e))
 
 
     return render_template('delete.html', form1=form1, title=r)
 
-@app.route("/change/<int:number>", methods=["GET", "POST"])
-def change(number):
+@app.route("/change/<int:number>/<pword>", methods=["GET", "POST"])
+def change(number, pword):
     form=Review()
     review = Reviews.query.filter_by(Review_ID=number).first()
     if request.method =="POST":
+        review.Review_title=form.Review_title.data
         review.Reviewer_name=form.Reviewer_name.data
         review.Review_password=form.Review_password.data
         review.Review=form.Review.data
