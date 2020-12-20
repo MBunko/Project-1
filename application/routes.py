@@ -2,17 +2,16 @@ from application import app, db
 from application.models import Games, Add, Reviews, Review, Delete, Update
 from flask import Flask, render_template, request, redirect, url_for
 from flask_wtf import FlaskForm
-from wtforms import StringField, SubmitField
+from wtforms import StringField, SubmitField, DateField
 
 @app.route('/add', methods=["GET", "POST"])
 def add():
     form=Add()
     if request.method == 'POST':
-
-        if not form.validate_on_submit():
+        new_game = Games(Title=form.Title.data, Release_date=form.Release_date.data, Genre=form.Genre.data, Age_rating=form.Age_rating.data, Description= form.Description.data)
+        if new_game.Release_date is None or len(new_game.Title)>300 or len(new_game.Description)>300 or len(new_game.Genre)>30 or len(new_game.Age_rating)>30:
             return render_template('adderror.html', form=form, title="New Game")
         else:
-            new_game = Games(Title=form.Title.data, Release_date=form.Release_date.data, Genre=form.Genre.data, Age_rating=form.Age_rating.data, Description= form.Description.data)
             db.session.add(new_game)
             db.session.commit()
             return redirect(url_for("home"))
@@ -46,11 +45,10 @@ def game(Title):
 def review(Title):
     form=Review()
     if request.method == 'POST':
-
-        if not form.validate_on_submit():
+        new_review = Reviews(Games_title=Title, Review_title=form.Review_title.data, Reviewer_name=form.Reviewer_name.data, Review_password=form.Review_password.data, Review=form.Review.data, Rating= form.Rating.data)
+        if len(new_review.Review_title)>300 or len(new_review.Reviewer_name)>30 or len(new_review.Review_password)>30 or len(new_review.Review)>3000 or new_review.Rating is None or new_review.Rating<1 or new_review.Rating>10:
             return render_template('reviewerror.html', form=form, title="New Game")
         else:
-            new_review = Reviews(Games_title=Title, Review_title=form.Review_title.data, Reviewer_name=form.Reviewer_name.data, Review_password=form.Review_password.data, Review=form.Review.data, Rating= form.Rating.data)
             db.session.add(new_review)
             db.session.commit()
             return redirect(url_for("game", Title=new_review.Games_title))
@@ -64,8 +62,7 @@ def delete(number, pword):
         db.session.delete(rev)
         db.session.commit()
         return redirect(url_for("game", Title=r))
-    else:
-        return "Entry does not exist"
+
 
 @app.route('/edit/<int:number>', methods=["GET", "POST"])
 def edit(number):
@@ -74,9 +71,10 @@ def edit(number):
     r=rev.Games_title
     d= rev.Review_ID
     e=rev.Review_password
-    if request.method == "POST":
-        if form1.Review_password.data==rev.Review_password:
-                return redirect(url_for("delete", number=d, pword=e))
+    f=form1.Review_password.data
+    if request.method=="POST":
+        if f==e:
+            return redirect(url_for("delete", number=d, pword=e))
 
 
     return render_template('delete.html', form1=form1, title=r)
@@ -91,7 +89,8 @@ def update(number):
     if request.method == "POST":
         if form1.Review_password.data==rev.Review_password:
             return redirect(url_for("change", number=d, pword=e))
-
+        else:
+            return redirect(url_for("update", number=d))
 
     return render_template('delete.html', form1=form1, title=r)
 
@@ -105,7 +104,10 @@ def change(number, pword):
         review.Review_password=form.Review_password.data
         review.Review=form.Review.data
         review.Rating= form.Rating.data
-        db.session.commit()
-        return redirect(url_for("game", Title=review.Games_title))
+        if len(review.Review_title)>300 or len(review.Reviewer_name)>30 or len(review.Review_password)>30 or len(review.Review)>3000 or review.Rating is None or review.Rating<1 or review.Rating>10:
+            return render_template('changeerror.html', form=form, title="Update", review=review)
+        else:
+            db.session.commit()
+            return redirect(url_for("game", Title=review.Games_title))
     return render_template("change.html", form=form, title="Update", review=review)
     
