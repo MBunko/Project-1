@@ -2,7 +2,7 @@ from application import db
 from flask import Flask, render_template, request
 from flask_wtf import FlaskForm
 from wtforms import StringField, SubmitField, IntegerField, DateField
-from wtforms.validators import DataRequired, NumberRange
+from wtforms.validators import DataRequired, NumberRange, Length
 from datetime import datetime
 
 
@@ -26,18 +26,18 @@ class Reviews(db.Model):
 
 
 class Add(FlaskForm):
-    Title = StringField('Title', validators=[DataRequired()])
+    Title = StringField('Title', [Length(min=1, max=300)])
     Release_date = DateField('Release date', validators=[DataRequired()])
-    Genre=StringField ("Genre", validators=[DataRequired()])
-    Age_rating= StringField("Age rating", validators=[DataRequired()])
-    Description= StringField("Description", validators=[DataRequired()])
+    Genre=StringField ("Genre",  [Length(min=1, max=30)])
+    Age_rating= StringField("Age rating", [Length(min=1, max=30)])
+    Description= StringField("Description", [Length(min=1, max=300)])
     submit = SubmitField('Add Game')
 
 class Review(FlaskForm):
-    Review_title= StringField("Review title")
-    Reviewer_name = StringField('Reviewer name')
-    Review_password = StringField('Password to edit review', validators=[DataRequired()])
-    Review=StringField ("Review- Max 3000 characters", validators=[DataRequired()])
+    Review_title= StringField("Review title", [Length(min=1, max=300)])
+    Reviewer_name = StringField('Reviewer name', [Length(min=0, max=30)])
+    Review_password = StringField('Password to edit review', [Length(min=1, max=30)])
+    Review=StringField ("Review- Max 3000 characters", [Length(min=1, max=3000)])
     Rating= IntegerField("Rating out of 10", validators=[DataRequired(), NumberRange(1,10)])
     submit = SubmitField('Add Review')
 
