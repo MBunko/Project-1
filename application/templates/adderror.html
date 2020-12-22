@@ -4,15 +4,15 @@ Error: invalid entry
         <div class='form'>
             <form method='POST' action=''>
                 {{ form.hidden_tag() }}
-                {{ form.Title.label }} {{ form.Title }}
+                {{ form.Title.label }} {{ form.Title }} {{ form.Title.errors }}
                 <br>
-                {{ form.Release_date.label }} (YYYY-MM-DD) {{ form.Release_date}}
+                {{ form.Release_date.label }} (YYYY-MM-DD) {{ form.Release_date }} {{ form.Release_date.errors }}
                 <br>
-                {{ form.Genre.label }} {{ form.Genre }}
+                {{ form.Genre.label }} {{ form.Genre }} {{ form.Genre.errors }}
                 <br>
-                {{ form.Age_rating.label }} {{ form.Age_rating }}
+                {{ form.Age_rating.label }} {{ form.Age_rating }} {{ form.Age_rating.errors }}
                 <br>
-                {{ form.Description.label }} {{ form.Description }}
+                {{ form.Description.label }} {{ form.Description }} {{ form.Description.errors }}
                 <br>
                 {{ form.submit }}
             {{ message }}
