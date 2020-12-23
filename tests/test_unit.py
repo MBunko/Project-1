@@ -8,7 +8,7 @@ from application.models import Games, Reviews, Add, Delete
 
 class Testbase(TestCase):
     def create_app(self):
-        app.config.update(SQLALCHEMY_DATABASE_URI="sqlite:///",
+        app.config.update(SQLALCHEMY_DATABASE_URI=getenv("DATABASE_URI"),
           #  SECRET_KEY= getenv("SECRET_KEY"),
             DEBUG=True, WTF_CSRF_ENABLED=False
         )

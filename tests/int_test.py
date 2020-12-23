@@ -13,7 +13,7 @@ class TestBase(LiveServerTestCase):
 
     def create_app(self):
 
-        app.config['SQLALCHEMY_DATABASE_URI'] = "sqlite:///data.db"
+        app.config['SQLALCHEMY_DATABASE_URI'] = getenv("DATABASE_URI")
         app.config['SECRET_KEY'] = getenv("SECRET_KEY")
         return app
 
