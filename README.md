@@ -62,7 +62,7 @@ Below is the initial Trello board from the start of the project:
 Here is the link to my Trello board: https://trello.com/b/EcXuFyAV/sfia-project-1  
 Below is my current Trello board:
   
-  
+### Expanded user stories  
   
 Here is a table of user stories:
 
@@ -79,7 +79,8 @@ Here is a table of user stories:
 |Host|Have a secure database off site|Make sure no one can reformat my database or see peoples passwords|Must
 |Host|Have automated testing, running and integration|Have a site that’s constantly up and to reduce my repetitive workload|	Must
 
-### Expanded user stories
+
+
 
 ## Risk assessment 
 
@@ -94,6 +95,18 @@ A list of risks identified at the star of the project with limited knowledge
 |Lack of knowledge|low|high|medium|Me + trainers|Ask questions in lectures on concerns and revise notes regularly|Ask for clarification on lacking knowledge during project and do personal research|  
 |Password hack|low|Very high|high|Me|Could try to hash passwords or not tie sensitive info to account|Immediately report hack|
 
+### Final assessment
+
+|Risk Description|Likelihood of the risk occurring|Impact if the risk occurs|Severity rating based on impact and likelihood|Risk owner|Mitigating action(actions to mitigate risk or reduce likelihood)|Contingent action.  (Actions to be taken if the risk happens)|  
+|---|---|---|---|---|---|---|  
+|Log in overwrite|medium|high|high|Me|Removed login functionality|Can no longer happen|
+|PC failure (data loss)|low|high|medium|Me|Copy of data on GCP and Github and regularly pushed|Download data back to machine| 
+|Server failure|low|high|medium|Server provider|Have local copy and copy on 2 seperate online services|Upload local copy when server back up|  
+|Traffic overload|low|low|low|Me + server provider|Likely none- could use service analytics and buy space accordingly|Post on site times likely to be down|  
+|Bugs in coding|high|high|high|Me|Finish task ahead of schedule to gain time to debug|Debug program|  
+|Lack of knowledge|low|high|medium|Me + trainers|Ask questions in lectures on concerns and revise notes regularly|Ask for clarification on lacking knowledge during project and do personal research|  
+|Password hack|low|Very high|high|Me+ user (password strength)|Passwords tied to review and not account so no email or account is compromised|None (would not know as no account hacked)|
+|Avoiding password requirements through URL manipulation|High|High|High|Me|URL itself for deleting and editing reviews now requires password|Create user login if way around discovered|
 
 ## Testing
 
