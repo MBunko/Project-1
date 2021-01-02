@@ -77,7 +77,9 @@ Below is the initial Trello board from the start of the project:
   
 Here is the link to my Trello board: https://trello.com/b/EcXuFyAV/sfia-project-1  
 Below is my current Trello board:
-  
+
+![TB2][TB2]
+
 ### Expanded user stories  
   
 Here is a table of user stories:
@@ -160,4 +162,5 @@ A list of risks identified at the star of the project with limited knowledge
 [Initial ERD]: https://lucid.app/publicSegments/view/3a71919e-07eb-4370-8853-af7eafda35bd/image.png
 [ERD2]: https://lucid.app/publicSegments/view/8967aca1-e6aa-43ec-b392-f9a77eab4f13/image.png
 [TB1]: https://i.imgur.com/7YArl2t.png
+[TB2]: https://i.imgur.com/p6DrbA1.png
 [CI]: https://i.imgur.com/jxxzQ3z.png
