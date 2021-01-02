@@ -32,8 +32,24 @@
 
 
 
-## Brief
+## Brief  
+The general objective of this project according the project specification is "to create a CRUD application with utilisation of supporting tools, methodologies and technologies that encapsulate all core modules covered during training" where CRUD refers to an applcation with Create. Read, Update and delete functionality.  
+Exact requirements for the project beyond CRUD functionality include use of: 
 
+*A Kanban Board.
+*Desgin documentation and a readme with all relevant content.
+*A cloud hosted database with 2 tables and a oneto many relationship.
+*Python programming.
+*Unit Testing with Pytest.
+*Integration Testing with Selenium.
+*Flask HTML front end design.
+*Git for version control.
+*Jenkins as a CI server.
+*A Cloud server.
+*ERD and CI pipeline diagrams.
+*A risk assessment.
+
+For my project I have created a basic game review application that allows users to add games and reviews to the applcation
 
 
 ## Software design
@@ -84,7 +100,7 @@ Here is a table of user stories:
 
 ## Risk assessment 
 
-###Week 1-3:
+### Week 1-3:
 A list of risks identified at the star of the project with limited knowledge 
 |Risk Description|Likelihood of the risk occurring|Impact if the risk occurs|Severity rating based on impact and likelihood|Risk owner|Mitigating action(actions to mitigate risk or reduce likelihood)|Contingent action.  (Actions to be taken if the risk happens)|  
 |---|---|---|---|---|---|---|  
