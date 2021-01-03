@@ -93,20 +93,26 @@ Finally we have the live testing section of the pipeline. After the artefact is 
 
 ## Project planning
 
+This project was planned and tracked using a Trello board because it is a free, simple, and easy to use Kanban board that can be made public to view.
+
 ### Trello board  
   
 Below is the initial Trello board from the start of the project:  
   
 ![TB1][TB1]  
+
+The above initial board basically lists the requirements on the specification as the To do must section. Below you will see the evolution of cases, tasks and task sections between the beginning of the project and now as the requirements have been exapnded into a multitude of tasks and the range of user stories have been increased.
   
 Here is the link to my Trello board: https://trello.com/b/EcXuFyAV/sfia-project-1  
 Below is my current Trello board:
 
 ![TB2][TB2]
 
+The sections for the Trello board above start with a list of user stories split into what the user and host wants available as a result of the project. The rest of the board is split into the sections “To Do” which are tasks not yet started, “In progress” which are tasks currently being worked on, “Done” which is finished tasks and “Not Done” which are tasks that were abandoned and not finished. Each section is further split into “Must” which are tasks that have to be completed to keep in line with passing the project, “Should” which are tasks that should be completed in order to make sure the project is at a high standard and receives above average scores and “Could” which are tasks that could help reach maximum marks or would otherwise improve the project beyond the scope of the project.   The Not done section does not specify type as it would be unacceptable to have Must tasks in the not done section. 
+
 ### Expanded user stories  
   
-Here is a table of user stories:
+Here is a table of user stories expanded to give full meaning to them so that if there were any issues implementing the tasks the expanded user stories could be checked to see if there were any other paths to reaching the desired destination:
 
 |As a…|I want to…|	So that I can…|Priority|
 |---|---|---|---|
@@ -127,7 +133,7 @@ Here is a table of user stories:
 ## Risk assessment 
 
 ### Week 1-3:
-A list of risks identified at the star of the project with limited knowledge 
+Below is a list of risks identified at the star of the project with limited knowledge of the tools used and project scope.
 |Risk Description|Likelihood of the risk occurring|Impact if the risk occurs|Severity rating based on impact and likelihood|Risk owner|Mitigating action(actions to mitigate risk or reduce likelihood)|Contingent action.  (Actions to be taken if the risk happens)|  
 |---|---|---|---|---|---|---|  
 |Log in overwrite|medium|high|high|Me|Create check for existing email or create unique auto generated ID|Create listing on login page not to create a second account with same username or email address|  
@@ -138,7 +144,7 @@ A list of risks identified at the star of the project with limited knowledge
 |Password hack|low|Very high|high|Me|Could try to hash passwords or not tie sensitive info to account|Immediately report hack|
 
 ### Final risk assessment
-
+Below is my risk assessment from the end of the project with a better understanding of the tools and problems to be faced. There aren't many different risks from above however the mitigating actions and contigent actions taken and to be taken have changed through the development. 
 |Risk Description|Likelihood of the risk occurring|Impact if the risk occurs|Severity rating based on impact and likelihood|Risk owner|Mitigating action(actions to mitigate risk or reduce likelihood)|Contingent action.  (Actions to be taken if the risk happens)|  
 |---|---|---|---|---|---|---|  
 |Log in overwrite|medium|high|high|Me|Removed login functionality|Can no longer happen|
