@@ -33,12 +33,12 @@
 
 
 ## Brief  
-The general objective of this project according the project specification is "to create a CRUD application with utilisation of supporting tools, methodologies and technologies that encapsulate all core modules covered during training" where CRUD refers to an applcation with Create. Read, Update and delete functionality.  
+The general objective of this project according the project specification is "to create a CRUD application with utilisation of supporting tools, methodologies and technologies that encapsulate all core modules covered during training" where CRUD refers to an application with Create. Read, Update and delete functionality.  
 Exact requirements for the project beyond CRUD functionality include use of: 
 
 * A Kanban Board.
-* Desgin documentation and a readme with all relevant content.
-* A cloud hosted database with 2 tables and a oneto many relationship.
+* Design documentation and a readme with all relevant content.
+* A cloud hosted database with 2 tables and a one to many relationship.
 * Python programming.
 * Unit Testing with Pytest.
 * Integration Testing with Selenium.
@@ -56,11 +56,11 @@ For my project I will be creating a basic game review application that allows us
 
 Throughout the project various software has been used in the creation, testing, and implementation of the application. Some of these software will be covered in more depth later in the readme but this section will show a few diagrams to generally show and explain the software implemented.  
 
-To start the applciation was created using Flask which is a python based micro-framework. As a micro-framework Flask has low built in fucntionality but has many possible extensions making it very flexible and therefore ideal for a simple project such as this. All installed extensions can be found in the requirements.txt file within this repo.  
+To start the application was created using Flask which is a python based micro-framework. As a micro-framework Flask has low built in functionality but has many possible extensions making it very flexible and therefore ideal for a simple project such as this. All installed extensions can be found in the requirements.txt file within this repo.  
 
 ### ERD  
 
-An ERD is an entry relationship diagram and is used to show the relatinships between 2 or more tables within a database. For this project my database tables were created with the create.py and models.py files that can be found within this repository and were created in a private MySQL server on Google cloud platform (GCP) to keep the databases secure and directly accessible by me only. MySql has been used because the applciation has been made using Flask which has extensions that make it compatable with MySQL meaning the database tables can be easily created, viewed, modified and deleted from the front end all through functionality created by Flask.
+An ERD is an entry relationship diagram and is used to show the relationships between 2 or more tables within a database. For this project my database tables were created with the create.py and models.py files that can be found within this repository and were created in a private MySQL server on Google cloud platform (GCP) to keep the databases secure and directly accessible by me only. MySql has been used because the application has been made using Flask which has extensions that make it compatible with MySQL meaning the database tables can be easily created, viewed, modified and deleted from the front end all through functionality created by Flask.
 
 Below is my initial ERD created at the very start of the project before I fully understood the tools I would be using to create the application:
   
@@ -69,7 +69,7 @@ ERD built with Lucid.app
   
 ![ERD][Initial ERD]  
  
-As you can see the initial diagram contains a user login table tied to the reviews, however this was not a part of the project specification and added unnecesary complication and potential issues to the project so as I started working on the project the design eventually evolved into the below diagram which matches the actual tables now stored in my MySQL server:  
+As you can see the initial diagram contains a user login table tied to the reviews, however this was not a part of the project specification and added unnecessary complication and potential issues to the project so as I started working on the project the design eventually evolved into the below diagram which matches the actual tables now stored in my MySQL server:  
  
 ![ERD2][ERD2]
 
