@@ -1,4 +1,4 @@
-# Videogame review site
+# Metagamer- A videogame review site
 
 ### Contents
 
@@ -49,19 +49,31 @@ Exact requirements for the project beyond CRUD functionality include use of:
 * ERD and CI pipeline diagrams.
 * A risk assessment.
 
-For my project I have created a basic game review application that allows users to add games and reviews to the applcation
+For my project I will be creating a basic game review application that allows users to add games and reviews to the application, view all the games and their reviews as well as update and delete their own reviews.
 
 
 ## Software design
 
+Throughout the project various software has been used in the creation, testing, and implementation of the application. Some of these software will be covered in more depth later in the readme but this section will show a few diagrams to generally show and explain the software implemented.  
+
+To start the applciation was created using Flask which is a python based micro-framework. As a micro-framework Flask has low built in fucntionality but has many possible extensions making it very flexible and therefore ideal for a simple project such as this. All installed extensions can be found in the requirements.txt file within this repo.  
 
 ### ERD  
+
+An ERD is an entry relationship diagram and is used to show the relatinships between 2 or more tables within a database. For this project my database tables were created with the create.py and models.py files that can be found within this repository and were created in a private MySQL server on Google cloud platform (GCP) to keep the databases secure and directly accessible by me only. MySql has been used because the applciation has been made using Flask which has extensions that make it compatable with MySQL meaning the database tables can be easily created, viewed, modified and deleted from the front end all through functionality created by Flask.
+
+Below is my initial ERD created at the very start of the project before I fully understood the tools I would be using to create the application:
+  
   
 ERD built with Lucid.app  
   
 ![ERD][Initial ERD]  
-  
+ 
+As you can see the initial diagram contains a user login table tied to the reviews, however this was not a part of the project specification and added unnecesary complication and potential issues to the project so as I started working on the project the design eventually evolved into the below diagram which matches the actual tables now stored in my MySQL server:  
+ 
 ![ERD2][ERD2]
+
+
 
 ### CI pipeline
 
@@ -113,7 +125,7 @@ A list of risks identified at the star of the project with limited knowledge
 |Lack of knowledge|low|high|medium|Me + trainers|Ask questions in lectures on concerns and revise notes regularly|Ask for clarification on lacking knowledge during project and do personal research|  
 |Password hack|low|Very high|high|Me|Could try to hash passwords or not tie sensitive info to account|Immediately report hack|
 
-### Final assessment
+### Final risk assessment
 
 |Risk Description|Likelihood of the risk occurring|Impact if the risk occurs|Severity rating based on impact and likelihood|Risk owner|Mitigating action(actions to mitigate risk or reduce likelihood)|Contingent action.  (Actions to be taken if the risk happens)|  
 |---|---|---|---|---|---|---|  
