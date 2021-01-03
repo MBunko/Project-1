@@ -80,7 +80,16 @@ If you look at the changes between the initial review table and the final one yo
 
 ### CI pipeline
 
+Below is a continuous integration (CI) pipeline diagram showing how all the software involved in the project connects.
+
 ![CI][CI]
+
+
+The top line depicts the development side with visual studio code (VSC) being the IDE I used and python being the programming language the app was built in as Flask is python based. Whenever a part of the project is completed it is then pushed to Github which is my version control system (VCS) serving both as a repo for my project and as a record of all changes and versions of the files and branches throughout the project allowing for easy debugging. Github was chosen because it is a free open source VCS that allows my project and changes to be viewed publicly. Finally we have my Trello board used for tracking the project that is used in tandem with the Github repo to determine what work needs to be done for Github and what tasks need to be updated on Trello.
+
+The second line as well as the HTML report is the devops side of the pipeline. A webhook is used to pull a copy of the Github repo to the Jenkins server automatically every time it is updated, Jenkins then creates a build of the project and Pytest is then used to test that all decided tests still pass with all the new changes and pytest cov builds a coverage report to show what percentage of the related files are covered. If the build fails (meaning Pytest has failed to pass all tests or the app cannot be run) or if coverage is no longer within an acceptable range then the error is shown and debugging is done in VSC. Regardless this data is saved as an HTML report which is the artefact for the build. More information on this part is provided in the testing and systems build sections of the readme. 
+
+Finally we have the live testing section of the pipeline. After the artefact is checked and cleared the app is tested in google cloud platform to make sure it works in the environment it will be running in  and if the human QA tester (in this first sprint me) has no issues with it, it will be pushed to the live environment also on google cloud platform. The only difference between the live environment and the test environment is that debug mode is on in the test environment so that I can see an error report for any issues caused. If there were any issues then these are again debugged in VSC and the cycle starts over again.
 
 ## Project planning
 
