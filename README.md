@@ -73,6 +73,9 @@ As you can see the initial diagram contains a user login table tied to the revie
  
 ![ERD2][ERD2]
 
+As you can see my final design consists of two tables with a one to many relationship (one game to many reviews). Each game entry in the database consists of a game title as it’s primary key both to ensure that titles are unique and to make the title the foreign key for the reviews to make referencing somewhat easier. The other fields for this table are just generic information required for any game and have a 30 character limit with the exception of the description which can allow for 300 characters.  
+
+If you look at the changes between the initial review table and the final one you will notice that the login has been replaced with a reviewer name (which is a nullable field) and a review password so that the password can be made for the review so that it can be updated and deleted only by someone who knows the password to keep a level of security without need for login functionality. Another change is the inclusion of review date time which automatically inputs the date and time the review is initially posted to provide more information to those reading the review. The final change is the inclusion of a review title to allow users to further customise and distinguish their reviews. The review ID is an auto increment integer to make for an ideal primary key allowing for any of the fields entered by the users to match up with another review without causing issues. You can also see that the Game title from the games tables is the foreign key that connects the review to the game.
 
 
 ### CI pipeline
