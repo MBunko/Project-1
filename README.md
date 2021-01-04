@@ -19,7 +19,7 @@
  7.2. [Possible improvements](#Possible-improvements)
 8. [Appendix](#Appendix)
  8.1. [Licensing](#Licensing)
- 8.2. [Contributors & Acknowledgement](#Contributors-&-Acknowledgement)
+ 8.2. [Contributors and Acknowledgement](#Contributors-and-Acknowledgement)
 
 
 
@@ -259,7 +259,7 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
-### Contributors & Acknowledgement 
+### Contributors and Acknowledgement 
 
 Author: Michael Bunko
 
