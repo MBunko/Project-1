@@ -159,10 +159,10 @@ Below is my risk assessment from the end of the project with a better understand
 ## Testing
 
 ### Unit testing and integration testing
-
+![Pytest][Pytest]
 
 ### Testing coverage
-
+![Cov][Cov]
 
 ## Software development
 
@@ -194,3 +194,5 @@ Below is my risk assessment from the end of the project with a better understand
 [TB1]: https://i.imgur.com/7YArl2t.png
 [TB2]: https://i.imgur.com/p6DrbA1.png
 [CI]: https://i.imgur.com/jxxzQ3z.png
+[Pytest]: https://i.imgur.com/YuFRW07.png
+[Cov]: https://i.imgur.com/z6Ik9oI.png
