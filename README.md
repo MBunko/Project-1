@@ -235,7 +235,7 @@ The main issue with the project is the use of Google cloud platform to host my s
 
 Further the MySQL server can also change IP. Because the service that runs the app is a daemon (background process) it stops functioning when this occurs and is difficult to change since it is within the systemD. This meant that my Jenkins build that runs the app no longer functioned. So while Jenkins does automatically run pytest it does not run the app.   
 
-Finally, to an outsider some of my code may seem somewhat confusing. For example there are 3 routes relating to updating the reviews, update which asks for the password to update, change which allows the user to actually alter the data in the table and edit which asks for the password so that it can redirect to the delete route. Also because update and edit both use the same form they also both use the delete.html for password entry. In future, I will have to think more about people using my work as a reference and label my titles and functions for their benefit instead of mine.
+Finally, to an outsider some of my code may seem somewhat confusing. For example there are 3 routes relating to updating the reviews, update which asks for the password to update, change which allows the user to actually alter the data in the table and edit which asks for the password so that it can redirect to the delete route. Also because update and edit both use the same form they also both use the delete.html for password entry. In future, I will have to think more about people using my work as a reference and label my titles and functions for their benefit instead of mine or otherwise label my code as I write it with help for viewers utilising a #. 
 
 ### Possible improvements
 
