@@ -13,8 +13,7 @@
 5. [Testing](#Testing)
  5.1. [Unit testing and integration testing](#Unit-testing-and-integration-testing)
  5.2. [Testing coverage](#Testing-coverage)
-6. [Software development](#Software-development)
- 6.1. [Front end](#Front-end)
+6. [Front end](#Front-end)
 7. [Evaluation](#Evaluation)
  7.1. [Issues](#Issues)
  7.2. [Possible improvements](#Possible-improvements)
@@ -183,9 +182,7 @@ For the coverage test I used Pytest –-cov=application to check the testing cov
 
 As you can see my tests cover 100% of all files meaning that the full breadth of the application has been tested making the tests a success.
 
-## Software development
-
-### Front end
+## Front end
 
 ![F1][F1]
 ![F2][F2]
