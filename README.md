@@ -19,7 +19,7 @@
  7.2. [Possible improvements](#Possible-improvements)
 8. [Appendix](#Appendix)
  8.1. [Licensing](#Licensing)
- 8.2. [Contributors & Acknowledgment](#Contributors-&-Acknowledgment)
+ 8.2. [Contributors & Acknowledgement](#Contributors-&-Acknowledgement)
 
 
 
@@ -241,9 +241,30 @@ Beyond learning how to avoid the above mentioned issue the main ways to improve 
 
 ### Licensing 
 
-### Contributors & Acknowledgment
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
 
+This permission notice shall be included in all
+copies or substantial portions of the Software.
 
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+### Contributors & Acknowledgement
+
+Author: Michael Bunko
+
+Acknowledgement: I would like to thank my trainers for their teaching and support including Harry Volker, Jay Grindrod, Nathan Forester and Peter Rhodes.
+I would also like to thank the members of my teams during training for their help and support.
 
 
 
