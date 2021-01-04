@@ -52,7 +52,7 @@ def review(Title):
             db.session.add(new_review)
             db.session.commit()
             return redirect(url_for("game", Title=new_review.Games_title))
-    return render_template('review.html', form=form, title="New Game")
+    return render_template('review.html', form=form, title="New review: "+Title)
 
 @app.route('/delete/<int:number>/<pword>')
 def delete(number, pword):
