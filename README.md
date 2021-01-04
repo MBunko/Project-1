@@ -176,7 +176,7 @@ As you can see at the bottom every single test for both integration and unit tes
 
 ### Testing coverage
 
-For the coverage test I used Pytest –-cov=application to check the testing coverage for the models.py, routes.py and __init__.py file. The __init__.py file is the set up file for functionality so it needs to be fully used by the test to show the test is set up correctly. The models.py file contains all the tables for the database as well as the forms used to make changes and reference the tables so the tests need to use this fully. Finally the routes.py file contains all the webpages and their functionality so it is important that we check how much of it is covered by the tests. A minimum requirement would be 75% coverage here as it would show the tests are checking the majority of functionality though 100% would be ideal
+For the coverage test I used Pytest –-cov=application to check the testing coverage for the models.py, routes.py and __init__.py file. The __init__.py file is the set up file for functionality so it needs to be fully used by the test to show the test is set up correctly. The models.py file contains all the tables for the database as well as the forms used to make changes and reference the tables so the tests need to use this fully. Finally the routes.py file contains all the webpages and their functionality so it is important that we check how much of it is covered by the tests. A minimum requirement would be 75% coverage here as it would show the tests are checking the majority of functionality though 100% would be ideal.
 
 ![Cov][Cov]
 
@@ -184,15 +184,46 @@ As you can see my tests cover 100% of all files meaning that the full breadth of
 
 ## Front end
 
+This section will cover the front end of my project. It is very basic and aesthetic design has not been a factor at this stage in the project beyond being easily navigated and understood and only CRUD functionality has been prioritised.
+
+As you can see below, every single page with the exception of /delete which performs a delete function and redirects to the home page automatically has two buttons at the top that allow for navigation to the home page and to the page that allows users to add a new game to the database.
+
 ![F1][F1]
+
+Above is the home page. It contains an alphabetical list of all games in the database listed under the letter they begin with. At the bottom of the page is a “.” category that lists all games that begin with a number or special character. As you can see you can click view game to be taken to the games page.
+
 ![F2][F2]
+
+This page allows the user to add a new game to the database. Release date is in the form of YYYY-MM-DD and the game will not be added if it is not in this format.
+
 ![F3][F3]
+
+This is the game page. It displays the data for a game selected on the home page. It also has a button that allows a user to create a new review as well as showing an aggregated review score and a list of reviews. You can see here that with no reviews there is a special message to let the users know there are no reviews and therefore no score.
+
 ![F4][F4]
+
+This is the review page that allows a user to create a new entry for the game whose page they were previously on.
+
 ![F5][F5]
+
+This is a custom error page. This is for adding a review but there is also one for adding a new game and for updating a review. It tells the user that they made an error at the top of the page next to the navigation menu and also displays a message by the invalid field to let them know what their mistake is.
+
 ![F7][F7]
+
+Here you can see the game page complete with a review and the aggregated score. You can also see that for each review there is an edit and delete button.
+
 ![F8][F8]
+
+Upon clicking the update button the user is redirected to this password screen to enter the password tied to the review. If entered incorrectly the page will simply reload.
+
 ![F9][F9]
+
+Upon successful password entry the user is redirected to the update page. The fields are identical to the add a review page however it does display the title of the original review for reference.
+
 ![F10][F10]
+
+The final page is the delete page. Just like for updating pressing the delete review button redirects to a password screen. Upon entering a successful password the user is redirected back to the games page with the review deleted.
+
 
 ## Evaluation
 
