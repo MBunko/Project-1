@@ -47,7 +47,7 @@ def review(Title):
     if request.method == 'POST':
         new_review = Reviews(Games_title=Title, Review_title=form.Review_title.data, Reviewer_name=form.Reviewer_name.data, Review_password=form.Review_password.data, Review=form.Review.data, Rating= form.Rating.data)
         if not form.validate_on_submit(): #len(new_review.Review_title)>300 or len(new_review.Reviewer_name)>30 or len(new_review.Review_password)>30 or len(new_review.Review)>3000 or new_review.Rating is None or new_review.Rating<1 or new_review.Rating>10:
-            return render_template('reviewerror.html', form=form, title="New Game")
+            return render_template('reviewerror.html', form=form, title="New review: "+Title)
         else:
             db.session.add(new_review)
             db.session.commit()
