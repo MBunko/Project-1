@@ -239,7 +239,7 @@ Finally, to an outsider some of my code may seem somewhat confusing. For example
 
 ### Possible improvements
 
-Beyond learning how to avoid the above mentioned issue the main ways to improve on this project moving forward would be the inclusion of login functionality for added security and to make the web application aesthetically appealing to compete with modern websites. Additional improvements would be the inclusion of a search bar to help find games and reviews by title or user and a function to write the table entries to two separate databases simultaneously to save the data in case the server goes down.
+Beyond learning how to avoid the above mentioned issue the main ways to improve on this project moving forward would be the inclusion of login functionality for added security and to make the web application aesthetically appealing to compete with modern websites. Additional improvements would be the inclusion of a search bar to help find games and reviews by title or user and a function to write the table entries to two separate databases simultaneously to save the data in case the server goes down. Finally, I could have my selenium testing cover the full range of unit tests for complete testing.
 
 ## Appendix
 
