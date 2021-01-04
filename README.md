@@ -191,6 +191,17 @@ As you can see my tests cover 100% of all files meaning that the full breadth of
 
 ### Front end
 
+![F1][F1]
+![F2][F2]
+![F3][F3]
+![F4][F4]
+![F5][F5]
+![F6][F6]
+![F7][F7]
+![F8][F8]
+![F9][F9]
+![F10][F10]
+
 ### CRUD functionality
 
 
@@ -200,6 +211,11 @@ As you can see my tests cover 100% of all files meaning that the full breadth of
 
 ### Integration test results
 
+## Evaluation
+
+### Issues
+
+### Future improvements
 
 ## Appendix
 
@@ -219,3 +235,13 @@ As you can see my tests cover 100% of all files meaning that the full breadth of
 [CI]: https://i.imgur.com/jxxzQ3z.png
 [Pytest]: https://i.imgur.com/YuFRW07.png
 [Cov]: https://i.imgur.com/z6Ik9oI.png
+[F1]: https://i.imgur.com/p1lZMFo.png
+[F2]: https://i.imgur.com/4ULXuZw.png
+[F3]: https://i.imgur.com/Z3x7x5l.png
+[F4]: https://i.imgur.com/fMkI8zM.png
+[F5]: https://i.imgur.com/rhrOJ8T.png
+[F6]: https://i.imgur.com/znRDdOB.png
+[F7]: https://i.imgur.com/DRLYVtr.png
+[F8]: https://i.imgur.com/Y0dTE1S.png
+[F9]:https://i.imgur.com/q2OUveJ.png
+[F10]: https://i.imgur.com/JKQeZht.png
