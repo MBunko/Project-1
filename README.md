@@ -55,7 +55,7 @@ To start the application was created using Flask which is a python based micro-f
 
 ### ERD  
 
-An ERD is an entry relationship diagram and is used to show the relationships between 2 or more tables within a database. For this project my database tables were created with the create.py and models.py files that can be found within this repository and were created in a private MySQL server on Google cloud platform (GCP) to keep the databases secure and directly accessible by me only. MySql has been used because the application has been made using Flask which has extensions that make it compatible with MySQL meaning the database tables can be easily created, viewed, modified and deleted from the front end all through functionality created by Flask.
+An ERD is an entity-relationship diagram and is used to show the relationships between 2 or more tables within a database. For this project my database tables were created with the create.py and models.py files that can be found within this repository and were created in a private MySQL server on Google cloud platform (GCP) to keep the databases secure and directly accessible by me only. MySql has been used because the application has been made using Flask which has extensions that make it compatible with MySQL meaning the database tables can be easily created, viewed, modified and deleted from the front end all through functionality created by Flask.
 
 Below is my initial ERD created at the very start of the project before I fully understood the tools I would be using to create the application:
   
@@ -142,7 +142,6 @@ Below is a list of risks identified at the star of the project with limited know
 Below is my risk assessment from the end of the project with a better understanding of the tools and problems to be faced. There aren't many different risks from above however the mitigating actions and contigent actions taken and to be taken have changed through the development. 
 |Risk Description|Likelihood of the risk occurring|Impact if the risk occurs|Severity rating based on impact and likelihood|Risk owner|Mitigating action(actions to mitigate risk or reduce likelihood)|Contingent action.  (Actions to be taken if the risk happens)|  
 |---|---|---|---|---|---|---|  
-|
 |Log in overwrite|medium|high|high|Me|Removed login functionality|Can no longer happen|
 |Incorrect data entry|Very high|low|medium|Me + User|Set up validators and error messages to prevent invalid data from going into the database and to let users know their mistakes| Find the mistake and add appropriate further validators.|
 |PC failure (data loss)|low|high|medium|Me|Copy of data on GCP and Github and regularly pushed|Download data back to machine| 
