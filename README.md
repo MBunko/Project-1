@@ -15,16 +15,12 @@
  5.2. [Testing coverage](#Testing-coverage)
 6. [Software development](#Software-development)
  6.1. [Front end](#Front-end)
- 6.2. [CRUD functionality](#CRUD-functionality)
-7. [Systems build](#Systems-build)
- 7.1. [Jenkins](#Jenkins)
- 7.2. [Integration test results](#Integration-test-results)
-8. [Evaluation](#Evaluation)
- 8.1. [Issues](#Issues)
- 8.2. [Possible improvements](#Possible-improvements)
-9. [Appendix](#Appendix)
- 9.1. [Licensing](#Licensing)
- 9.2. [Contributors & Acknowledgment](#Contributors-&-Acknowledgment)
+7. [Evaluation](#Evaluation)
+ 7.1. [Issues](#Issues)
+ 7.2. [Possible improvements](#Possible-improvements)
+8. [Appendix](#Appendix)
+ 8.1. [Licensing](#Licensing)
+ 8.2. [Contributors & Acknowledgment](#Contributors-&-Acknowledgment)
 
 
 
@@ -80,14 +76,14 @@ If you look at the changes between the initial review table and the final one yo
 
 ### CI pipeline
 
-Below is a continuous integration (CI) pipeline diagram showing how all the software involved in the project connects.
+Below is a continuous integration (CI) pipeline diagram showing how all the software involved in the project connects. The heart of CI pipeline is the CI server which allows for continuous and automatic integration of new code. For this project I am using Jenkins because it is a free CI server that can easily be installed and managed on a simple linux VM meaning it can be cheaply run on it's own VM server with a unique private IP address. I will be using Jenkins to automatically build and test the application every time a change is made to the Github repository as will be explained beneath the diagram.  
 
 ![CI][CI]
 
 
 The top line depicts the development side with visual studio code (VSC) being the IDE I used and python being the programming language the app was built in as Flask is python based. Whenever a part of the project is completed it is then pushed to Github which is my version control system (VCS) serving both as a repo for my project and as a record of all changes and versions of the files and branches throughout the project allowing for easy debugging. Github was chosen because it is a free open source VCS that allows my project and changes to be viewed publicly. Finally we have my Trello board used for tracking the project that is used in tandem with the Github repo to determine what work needs to be done for Github and what tasks need to be updated on Trello.
 
-The second line as well as the HTML report is the devops side of the pipeline. A webhook is used to pull a copy of the Github repo to the Jenkins server automatically every time it is updated, Jenkins then creates a build of the project and Pytest is then used to test that all decided tests still pass with all the new changes and pytest cov builds a coverage report to show what percentage of the related files are covered. If the build fails (meaning Pytest has failed to pass all tests or the app cannot be run) or if coverage is no longer within an acceptable range then the error is shown and debugging is done in VSC. Regardless this data is saved as an HTML report which is the artefact for the build. More information on this part is provided in the testing and systems build sections of the readme. 
+The second line as well as the HTML report is the devops side of the pipeline. A webhook is used to pull a copy of the Github repo to the Jenkins server automatically every time it is updated, Jenkins then creates a build of the project and uses Pytest to test that all decided tests still pass with all the new changes and pytest cov builds a coverage report to show what percentage of the related files are covered. If the build fails (meaning Pytest has failed to pass all tests or the app cannot be run) or if coverage is no longer within an acceptable range then the error is shown and debugging is done in VSC. Regardless this data is saved as an HTML report which is the artefact for the build. More information on this part is provided in the testing section of the readme. 
 
 Finally we have the live testing section of the pipeline. After the artefact is checked and cleared the app is tested in google cloud platform to make sure it works in the environment it will be running in  and if the human QA tester (in this first sprint me) has no issues with it, it will be pushed to the live environment also on google cloud platform. The only difference between the live environment and the test environment is that debug mode is on in the test environment so that I can see an error report for any issues caused. If there were any issues then these are again debugged in VSC and the cycle starts over again.
 
@@ -201,15 +197,6 @@ As you can see my tests cover 100% of all files meaning that the full breadth of
 ![F8][F8]
 ![F9][F9]
 ![F10][F10]
-
-### CRUD functionality
-
-
-## Systems build
-
-### Jenkins
-
-### Integration test results
 
 ## Evaluation
 
