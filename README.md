@@ -229,7 +229,13 @@ The final page is the delete page. Just like for updating pressing the delete re
 
 ### Issues
 
+The main issue with the project is the use of Google cloud platform to host my servers. It was chosen because it provides a free trial which is ideal during training, however upon stopping a VM to preserve trial credit the IP address is not saved. This means that automated integration is not fully automated as on stopping and starting the VMs requires giving the new IP access to Githubs webhook and to the MySQL server.
+
+Further the MySQL server can also change IP. Because the service that runs the app is a daemon (background process) it stops functioning when this occurs and is difficult to change since it is within the systemD. This meant that my Jenkins build that runs the app no longer functioned. So while Jenkins does automatically run pytest it does not run the app.   
+
 ### Possible improvements
+
+Beyond learning how to avoid the above mentioned issue the main ways to improve on this project moving forward would be the inclusion of login functionality for added security and to make the web application aesthetically appealing to compete with modern websites. Additional improvements would be the inclusion of a search bar to help find games and reviews by title or user and a function to write the table entries to two separate databases simultaneously to save the data in case the server goes down.
 
 ## Appendix
 
