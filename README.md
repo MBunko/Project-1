@@ -44,7 +44,7 @@ Exact requirements for the project beyond CRUD functionality include use of:
 * ERD and CI pipeline diagrams.
 * A risk assessment.
 
-For my project I will be creating a basic game review application that allows users to add games and reviews to the application, view all the games and their reviews as well as update and delete their own reviews.
+For my project I will be creating a basic game review application that allows users to add games and reviews to the application, view all the games and their reviews as well as update and delete their own reviews. I would also like for users to be able to rate games and for the application to aggregate the ratings to sure a general consensus of the reviewers.
 
 
 ## Software design
