@@ -158,11 +158,34 @@ Below is my risk assessment from the end of the project with a better understand
 
 ## Testing
 
+The testing software used for this project is Pytest which is a python testing framework that clearly tests functionality and much like Flask is fairly extensible as there are several installable modules to go with it. The only one needed for this project is Pytest-cov which is a module designed to show how much of the code in files or folders is actually tested by the tests. There is also a pytest-coverage module however pytest-cov can be used to generate HTML reports which can be archived and easily read through Jenkins which will be discussed in the Jenkins section of the readme which is why it was chosen.
+
+
 ### Unit testing and integration testing
+
+The fundamental purpose of unit testing in this project was to test CRUD (create, read, update, delete) functionality, making sure that each function/URL performs whichever of those tasks it was designed to. In the below front end section I will go into more detail about each page but the first set of unit tests simply checked that each page could be visited without returning an error. This test has been applied to every single page as they are all designed to be used in some capacity. The next test was just to see that when the homepage was visited it could be read showing that the page would display as intended from the start. The reason this was the only page tested in this way is because all other pages are tested in other ways which include additions and changes performed within them being read on those pages or others. 
+
+The next set of tests were add tests. These were designed to see if going to the page to add games to the database or the page to add reviews would then on redirect make the additions readable on the page. This checks that the add pages are working as designed and that read functionality was working correctly on the pages that would display their additions. I also had separate tests in this category to check if upon adding an invalid Game or review (for the game giving it a release date of “today” when the form only accepts them in the form of yyyy-mm-dd and for the review giving it a score of 15 when the form only accepts numbers 1-10) that it would redirect to the error page and be able to read the error message. 
+
+Next was for updating a review. The review to be updated was created as part of the test set up so that it would be available to read and change. First I tested that upon entering the correct password to match the review you would be redirected to the page that would allow you to update the review and also that entering the incorrect password would not. I then tested that altering the review would make the new review readable on the review page (ensuring it was reading specifically altered parts of the review) and that entering invalid information (again using a rating over 10 for the test) that it would redirect to an error page.
+
+Finally I tested delete functionality by testing that upon entering the password correctly while attempting to delete that the review would no longer be visible on the reviews page.
+
+For integration testing, firstly both the above unit testing and below selenium testing were done on a separate database on the same MySQL server that the application uses therefore testing integration between Flask and the MySQL database as the tests will fail to read any games or reviews if it cannot connect to the server they are being stored on.
+
+Secondly I used selenium testing which tests functionality by having the program actually going to the webpage, entering information directly to the page and clicking the buttons to navigate rather than forcing redirects. This tests that functionality applies to the web application and not just the URL functions. For this test I first tested that the server was properly running to make sure the test would be also able to properly run. Then I simply tested that the adding of a game unit test could be recreated with the test using the web application to perform it as if it were a user. I only did this for one unit test as if one test works correctly in a live environment the rest should do the same. It should also be noted that I was personally testing the functionality in the same environment directly after all tests passed as was shown in the CI pipeline so it would be directly noticed if there was any inconsistency.
+
 ![Pytest][Pytest]
 
+As you can see at the bottom every single test for both integration and unit testing passed successfully showing that the program works as intended and passes CRUD functionality.
+
 ### Testing coverage
+
+For the coverage test I used Pytest –-cov=application to check the testing coverage for the models.py, routes.py and __init__.py file. The __init__.py file is the set up file for functionality so it needs to be fully used by the test to show the test is set up correctly. The models.py file contains all the tables for the database as well as the forms used to make changes and reference the tables so the tests need to use this fully. Finally the routes.py file contains all the webpages and their functionality so it is important that we check how much of it is covered by the tests. A minimum requirement would be 75% coverage here as it would show the tests are checking the majority of functionality though 100% would be ideal
+
 ![Cov][Cov]
+
+As you can see my tests cover 100% of all files meaning that the full breadth of the application has been tested making the tests a success.
 
 ## Software development
 
