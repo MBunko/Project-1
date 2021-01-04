@@ -174,7 +174,7 @@ Secondly I used selenium testing which tests functionality by having the program
 
 ![Pytest][Pytest]
 
-As you can see at the bottom every single test for both integration and unit testing passed successfully showing that the program works as intended and passes CRUD functionality.
+As you can see at the bottom every single test for both integration and unit testing passed successfully showing that the program works as intended and passes CRUD functionality. This means that every single page can be visited without error. The home page can be viewed and read. Games and reviews can be added to the database and read in their respective pages and pre-existing reviews can be updated with the same result. Incorrect entry of data into a form for creating or updating entries to the database will redirect to the error page and the error message can be read. Correct entry of the password to update a review will redirect to the page where user can change the details of their reviews and for deletion correct entry will return to the games page where the review can no longer be read. The fact that the tests relating to the database pass also means that connection to the SQL database is also successful. For selenium testing this means the application runs on startup and that the unit tests for going from the home page to the add page and successfully adding an entry to the database and reading it on the web application works identically when using the web browser and manually performing the tasks to when done through the functions. 
 
 ### Testing coverage
 
