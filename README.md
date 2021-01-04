@@ -51,7 +51,7 @@ For my project I will be creating a basic game review application that allows us
 
 Throughout the project various software has been used in the creation, testing, and implementation of the application. Some of these software will be covered in more depth later in the readme but this section will show a few diagrams to generally show and explain the software implemented.  
 
-To start the application was created using Flask which is a python based micro-framework. As a micro-framework Flask has low built in functionality but has many possible extensions making it very flexible and therefore ideal for a simple project such as this. All installed extensions can be found in the requirements.txt file within this repo.  
+To start the application was created using Flask which is a python based micro-framework alongside HTML for the pages. As a micro-framework Flask has low built in functionality but has many possible extensions making it very flexible and therefore ideal for a simple project such as this. All installed extensions can be found in the requirements.txt file within this repo.  
 
 ### ERD  
 
