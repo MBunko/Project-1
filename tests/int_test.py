@@ -18,11 +18,7 @@ class TestBase(LiveServerTestCase):
         return app
 
     def setUp(self):
-        """
-        Setup the test driver and create table schema before every test.
-        You can populate the table with some test tasks here if you want to
-        test read/update/delete functionality.
-        """
+
         print("--------------------------NEXT-TEST----------------------------------------------")
         chrome_options = Options()
         chrome_options.binary_location = "/usr/bin/chromium-browser"
@@ -48,11 +44,7 @@ class TestBase(LiveServerTestCase):
 
 class TestGameCreation(TestBase):
     def test_game_creation(self):
-        """
-        Test that a user can navigate to the Create Task page,
-        enter the description for the task and check to see if
-        it redirects to the home page
-        """
+
 
         # Navigate to the Create Task page
         self.driver.find_element_by_xpath('/html/body/a[2]').click()
