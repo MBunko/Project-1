@@ -153,7 +153,7 @@ Below is my risk assessment from the end of the project with a better understand
 
 ## Testing
 
-The testing software used for this project is Pytest which is a python testing framework that clearly tests functionality and much like Flask is fairly extensible as there are several installable modules to go with it. The only one needed for this project is Pytest-cov which is a module designed to show how much of the code in files or folders is actually tested by the tests. There is also a pytest-coverage module however pytest-cov can be used to generate HTML reports which can be archived and easily read through Jenkins which will be discussed in the Jenkins section of the readme which is why it was chosen.
+The testing software used for this project is Pytest which is a python testing framework that clearly tests functionality and much like Flask is fairly extensible as there are several installable modules to go with it. The only ones needed for this project is Pytest-cov which is a module designed to show how much of the code in files or folders is actually tested by the tests and selenium which allows for integration testing which will be discussed below. There is also a pytest-coverage module however pytest-cov can be used to generate HTML reports which can be archived and easily read through Jenkins which will be discussed in the Jenkins section of the readme which is why it was chosen.
 
 
 ### Unit testing and integration testing
