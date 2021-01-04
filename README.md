@@ -142,9 +142,12 @@ Below is a list of risks identified at the star of the project with limited know
 Below is my risk assessment from the end of the project with a better understanding of the tools and problems to be faced. There aren't many different risks from above however the mitigating actions and contigent actions taken and to be taken have changed through the development. 
 |Risk Description|Likelihood of the risk occurring|Impact if the risk occurs|Severity rating based on impact and likelihood|Risk owner|Mitigating action(actions to mitigate risk or reduce likelihood)|Contingent action.  (Actions to be taken if the risk happens)|  
 |---|---|---|---|---|---|---|  
+|
 |Log in overwrite|medium|high|high|Me|Removed login functionality|Can no longer happen|
+|Incorrect data entry|Very high|low|medium|Me + User|Set up validators and error messages to prevent invalid data from going into the database and to let users know their mistakes| Find the mistake and add appropriate further validators.|
 |PC failure (data loss)|low|high|medium|Me|Copy of data on GCP and Github and regularly pushed|Download data back to machine| 
-|Server failure|low|high|medium|Server provider|Have local copy and copy on 2 seperate online services|Upload local copy when server back up|  
+|Server failure (VM)|low|high|medium|Server provider|Have local copy and copy on 2 seperate online services|Upload local copy when server back up|  
+|Server failure (MySQL)|low|high|medium|Server provider| Have second copy of database that's regularly updated| Consider having application write data to 2 spearate databases from the start|
 |Traffic overload|low|low|low|Me + server provider|Likely none- could use service analytics and buy space accordingly|Post on site times likely to be down|  
 |Bugs in coding|high|high|high|Me|Finish task ahead of schedule to gain time to debug|Debug program|  
 |Lack of knowledge|low|high|medium|Me + trainers|Ask questions in lectures on concerns and revise notes regularly|Ask for clarification on lacking knowledge during project and do personal research|  
@@ -232,6 +235,8 @@ The final page is the delete page. Just like for updating pressing the delete re
 The main issue with the project is the use of Google cloud platform to host my servers. It was chosen because it provides a free trial which is ideal during training, however upon stopping a VM to preserve trial credit the IP address is not saved. This means that automated integration is not fully automated as on stopping and starting the VMs requires giving the new IP access to Githubs webhook and to the MySQL server.
 
 Further the MySQL server can also change IP. Because the service that runs the app is a daemon (background process) it stops functioning when this occurs and is difficult to change since it is within the systemD. This meant that my Jenkins build that runs the app no longer functioned. So while Jenkins does automatically run pytest it does not run the app.   
+
+Finally, to an outsider some of my code may seem somewhat confusing. For example there are 3 routes relating to updating the reviews, update which asks for the password to update, change which allows the user to actually alter the data in the table and edit which asks for the password so that it can redirect to the delete route. Also because update and edit both use the same form they also both use the delete.html for password entry. In future, I will have to think more about people using my work as a reference and label my titles and functions for their benefit instead of mine.
 
 ### Possible improvements
 
