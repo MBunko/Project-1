@@ -215,7 +215,7 @@ As you can see my tests cover 100% of all files meaning that the full breadth of
 
 ### Issues
 
-### Future improvements
+### Possible improvements
 
 ## Appendix
 
